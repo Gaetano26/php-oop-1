@@ -1,14 +1,32 @@
 <?php
-
+/**
+ * Summary Class Movies
+ */
 class Movie
 {
-    public $title;
-    public $origine_title;
-    public $nationality;
-    public $vote;
-    public $image;
+    public string $title;
+    public string $origine_title;
+    public string $nationality;
+    public int $vote;
+    public string $image;
+    private $availableFlags = [
+        'en',
+        'it',
+        'es',
+        'fr',
+        'de',
+    ];
 
-    public function __construct($title, $origine_title, $nationality, $image, $vote)
+    /**
+     * constructor
+     *
+     * @param string $title
+     * @param string $origine_title
+     * @param string $nationality
+     * @param integer $vote
+     * @param string $image
+     */
+    public function __construct( string $title, string $origine_title, string $nationality, int $vote ,string $image)
     {
         $this->title = $title;
         $this->origine_title = $origine_title;
@@ -16,5 +34,15 @@ class Movie
         $this->vote = $vote;
         $this->image = $image;
     }
+
+    public function getFlag()
+    {
+        if (in_array($this->nationality, $this->availableFlags)) {
+            return "<img src='img/$this->nationality.png' alt='$this->nationality'>";
+        } else {
+            return "<span>Unavailable</span>";
+        }
+    }
     
 }
+
