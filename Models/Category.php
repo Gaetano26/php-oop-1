@@ -21,4 +21,6 @@ class Category
         $this->type = $type;
         $this->genre = $genre;
     }
+
+    
 }
