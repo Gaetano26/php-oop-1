@@ -5,6 +5,7 @@ include './partials/template/header.php';
 
 <?php
 include __DIR__ . '/Models/Movies.php';
+
 $movies = [
     new Movie ('Il Padrino', 'The Godfather', 'en', 9 , 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r4gnMXoY1efvaolNDjn3nj4046S.jpg' ),
     new Movie ('Via Col Vento', 'Gone With The Wind', 'en', 8 , 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xRyW60TXvX7Q2HSbpz8nZxKaTkL.jpg' ),
@@ -34,7 +35,7 @@ $movies = [
                             <h3 class="card-title fs-6"> <?php echo $movie->title ?></h3>
                             <h5 class="fs-6"> <?php echo $movie->origine_title ?></h5>
                             <p> Vote:<?php echo $movie->vote ?></p>
-                            <p>Nationality: <?php echo getFlag() ?> </p>
+                            <p>Nationality: <?php echo $movie->getFlag() ?> </p>
 
                         </div>
 

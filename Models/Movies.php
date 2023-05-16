@@ -38,7 +38,7 @@ class Movie
     public function getFlag()
     {
         if (in_array($this->nationality, $this->availableFlags)) {
-            return "<img src='img/$this->nationality.png' alt='$this->nationality'>";
+            return "<img class='flag' src='img/$this->nationality.png' alt='$this->nationality'>";
         } else {
             return "<span>Unavailable</span>";
         }
