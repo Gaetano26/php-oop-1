@@ -35,7 +35,8 @@ $movies = [
                             <h3 class="card-title fs-6"> <?php echo $movie->title ?></h3>
                             <h5 class="fs-6"> <?php echo $movie->origine_title ?></h5>
                             <p> Vote:<?php echo $movie->vote ?></p>
-                            <p> Vote:<?php echo $movie->category ?></p>
+                            <p> Genere: <?php echo $movie->categor->genre ?></p>
+                            <p> Tipologia: <?php echo $movie->categor->type ?></p>
                             <p>Nationality: <?php echo $movie->getFlag() ?> </p>
 
                         </div>

@@ -11,7 +11,7 @@ class Movie
     public string $nationality;
     public int $vote;
     public string $image;
-    public string $category;
+    public object $categor;
     private $availableFlags = [
         'en',
         'it',
@@ -29,14 +29,14 @@ class Movie
      * @param integer $vote
      * @param string $image
      */
-    public function __construct( string $title, string $origine_title, string $nationality, int $vote ,string $image, Category $category)
+    public function __construct( string $title, string $origine_title, string $nationality, int $vote ,string $image, Category $categor)
     {
         $this->title = $title;
         $this->origine_title = $origine_title;
         $this->nationality = $nationality;
         $this->vote = $vote;
         $this->image = $image;
-        $this->category = $category;
+        $this->categor = $categor;
     }
 
     public function getFlag()
